@@ -1,3 +1,13 @@
-p {
-    font-family: Lato;
+body {
+    background: lightgrey;
+    font-family: sans-serif;
 }
+
+#fb-rendered-form {
+    clear: both;
+    display: none;
+}
+#fb-rendered-form button {
+    float: right;
+}
+  

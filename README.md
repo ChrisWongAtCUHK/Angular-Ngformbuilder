@@ -28,6 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Corresponding jQuery formBuilder
  * [Introduction: jQuery formBuilder](https://formbuilder.readthedocs.io/en/latest/#jquery-formbuilder)
+ * [Toggling the Builder](https://formbuilder.readthedocs.io/en/latest/formBuilder/demos/toggle-builder/)
 
 ## Other references
  * [angular-ngformbuilder](https://stackblitz.com/edit/angular-ngformbuilder)

@@ -17,7 +17,23 @@ export class AppComponent implements AfterViewInit {
     setTimeout(() => {
       // delay 2 seconds waiting scripts to load
       this.ngZone.runOutsideAngular(() => {
-        $(document.getElementById('fb-editor')).formBuilder();
+        let $fbEditor = $(document.getElementById('fb-editor')),
+          $formContainer = $(document.getElementById('fb-rendered-form')),
+          fbOptions = {
+            onSave: () => {
+              $fbEditor.toggle();
+              $formContainer.toggle();
+              $('form', $formContainer).formRender({
+                formData: formBuilder.formData
+              });
+            }
+          },
+          formBuilder = $fbEditor.formBuilder(fbOptions);
+
+        $('.edit-form', $formContainer).click(() => {
+          $fbEditor.toggle();
+          $formContainer.toggle();
+        });
       });
 
     }, 2000)
